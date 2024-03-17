@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             await addDoc(collection(db, "users"), userDetails);
             // Data written successfully, redirect to verification page
-            window.location.href = 'verification.html';
+            window.location.href = 'login.html ';
         } catch (error) {
             console.error(error);
             // Handle errors here
