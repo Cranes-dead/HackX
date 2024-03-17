@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HealthSpun - Clinic Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spec_Doc Table Form -->
+    <div class="container">
+        <h2>Create Spec_Doc Table</h2>
+        <form action="/create_spec_doc_table.php" method="POST">
+            <div class="mb-3">
+                <label for="spec_doc_id" class="form-label">Specialized Doctor ID</label>
+                <input type="text" class="form-control" id="spec_doc_id" name="spec_doc_id" style="width: 70%;" required>
+            </div>
+            <div class="mb-3">
+                <label for="spec_doc_name" class="form-label">Specialized Doctor Name</label>
+                <input type="text" class="form-control" id="spec_doc_name" name="spec_doc_name" style="width: 70%;" required>
+            </div>
+            <div class="mb-3">
+                <label for="med_pdf" class="form-label">Medical PDF</label>
+                <input type="file" class="form-control" id="med_pdf" name="med_pdf" style="width: 70%;" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Table</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

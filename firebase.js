@@ -1,21 +1,20 @@
-// firebase.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
- apiKey: "AIzaSyAaR5hS5d38coW3Yk8uTF9DPWtu8vj1xQc",
- authDomain: "hackx2.firebaseapp.com",
- databaseURL: "https://hackx2-default-rtdb.asia-southeast1.firebasedatabase.app",
- projectId: "hackx2",
- storageBucket: "hackx2.appspot.com",
- messagingSenderId: "774594653096",
- appId: "1:774594653096:web:d3833830f2bb6fa0194b9d",
- measurementId: "G-8ESQ2PYE8T"
-};
+    apiKey: "AIzaSyAzfIgVC-JPyV7hLDAsH_28cVoZDpdFK8U",
+    authDomain: "hackx3-92b94.firebaseapp.com",
+    projectId: "hackx3-92b94",
+    storageBucket: "hackx3-92b94.appspot.com",
+    messagingSenderId: "543033204282",
+    appId: "1:543033204282:web:971f88eae0abdd00555f03"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+const db = getFirestore();
 
-export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword };
+export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, db, collection, addDoc };

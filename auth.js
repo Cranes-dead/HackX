@@ -1,37 +1,35 @@
 // auth.js
-import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from './firebase.js';
+import { auth, createUserWithEmailAndPassword, db, collection, addDoc } from './firebase.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const signupForm = document.getElementById('signupForm');
-    const loginForm = document.getElementById('loginForm');
 
-    signupForm.addEventListener('submit', (e) => {
+    signupForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Sign-up successful, redirect to verification page
-                window.location.href = 'verification.html';
-            })
-            .catch((error) => {
-                console.error(error);
-                // Handle errors here
-            });
-    });
+        const name = document.getElementById('name').value;
+        const age = document.getElementById('age').value;
+        const sex = document.getElementById('sex').value;
+        const mobile = document.getElementById('mobile').value;
 
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Login successful, redirect to dashboard or home page
-                window.location.href = 'dashboard.html';
-            })
-            .catch((error) => {
-                console.error(error);
-                // Handle errors here
-            });
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            // Sign-up successful, write additional details to Firestore
+            const userDetails = {
+                name: name,
+                age: age,
+                sex: sex,
+                mobile: mobile,
+                uid: userCredential.user.uid // Store the user's UID for reference
+            };
+            await addDoc(collection(db, "users"), userDetails);
+            // Data written successfully, redirect to verification page
+            window.location.href = 'verification.html';
+        } catch (error) {
+            console.error(error);
+            // Handle errors here
+            window.location.href = '404.html';
+        }
     });
 });

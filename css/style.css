@@ -5,6 +5,14 @@
     --dark: #1B2C51;
 }
 
+.text-primary {
+    color: #0463FA !important;
+}
+
+.text-white {
+    color: #0463FA !important;
+}
+
 .fw-medium {
     font-weight: 500 !important;
 }

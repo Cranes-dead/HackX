@@ -9,9 +9,6 @@
     <meta content="" name="description">
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 
-    <!-- Firebase Authentication -->
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
-
     <!-- Your JavaScript file -->
     <script type="module" src="firebase.js"></script>
     <script type="module" src="auth.js"></script>
@@ -71,7 +68,7 @@
                                     <input type="password" id="password" class="form-control border-0" placeholder="Your Password" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <button onclick="createUserWithEmailAndPassword(auth, email, password)" class="btn btn-primary w-100 py-3" type="submit">Sign In</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Sign In</button>
                                 </div>
                             </div>
                         </form>
@@ -88,31 +85,6 @@
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="SignUpfunctions.js"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyAaR5hS5d38coW3Yk8uTF9DPWtu8vj1xQc",
-          authDomain: "hackx2.firebaseapp.com",
-          databaseURL: "https://hackx2-default-rtdb.asia-southeast1.firebasedatabase.app",
-          projectId: "hackx2",
-          storageBucket: "hackx2.appspot.com",
-          messagingSenderId: "774594653096",
-          appId: "1:774594653096:web:d3833830f2bb6fa0194b9d",
-          measurementId: "G-8ESQ2PYE8T"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>

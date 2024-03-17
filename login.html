@@ -9,12 +9,9 @@
     <meta content="" name="description">
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 
-    <!-- Firebase Authentication -->
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
-
     <!-- Your JavaScript file -->
     <script type="module" src="firebase.js"></script>
-    <script type="module" src="auth.js"></script>
+    <script type="module" src="login.js"></script>
 
 
     <!-- Favicon -->
@@ -35,7 +32,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
@@ -54,16 +50,18 @@
                         <h2 class="text-center mb-4">Login</h2>
                         <form id="loginForm">
                             <div class="mb-3">
-                                <input id="email" type="email" class="form-control border-0" placeholder="Email" required>
+                                <input type="email" id="email" class="form-control border-0" placeholder="Email" required>
                             </div>
                             <div class="mb-3">
-                                <input id="password" type="password" class="form-control border-0" placeholder="Password" required>
+                                <input type="password" id="password" class="form-control border-0" placeholder="Password" required>
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="rememberMe">
                                 <label class="form-check-label" for="rememberMe">Remember me</label>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100 py-3">Login</button>
+                            <div>
+                                <button onclick="signInWithEmailAndPassword(auth, email, password)" type="submit" class="btn btn-primary w-100 py-3">Login</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -71,7 +69,6 @@
         </div>
     </div>
     <!-- Login Form End -->
-
     <!-- Footer Start -->
     <footer class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <!-- Footer content similar to the provided HTML -->
@@ -86,30 +83,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyAaR5hS5d38coW3Yk8uTF9DPWtu8vj1xQc",
-          authDomain: "hackx2.firebaseapp.com",
-          databaseURL: "https://hackx2-default-rtdb.asia-southeast1.firebasedatabase.app",
-          projectId: "hackx2",
-          storageBucket: "hackx2.appspot.com",
-          messagingSenderId: "774594653096",
-          appId: "1:774594653096:web:d3833830f2bb6fa0194b9d",
-          measurementId: "G-8ESQ2PYE8T"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
 </body>
 
 </html>

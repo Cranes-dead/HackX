@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HealthSpun - Clinic Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <style>
+        /* Custom CSS for input width */
+        .form-control {
+            width: 70%; /* Adjust width as needed */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Doctor Table Form -->
+    <div class="container">
+        <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>HealthSpun</h1><br>
+        <h2>Create Doctor Table</h2>
+        <form action="/create_doctor_table.php" method="POST">
+            <div class="mb-3">
+                <label for="doc_id" class="form-label">Doctor ID</label>
+                <input type="text" class="form-control" id="doc_id" name="doc_id" required>
+            </div>
+            <div class="mb-3">
+                <label for="doc_name" class="form-label">Doctor Name</label>
+                <input type="text" class="form-control" id="doc_name" name="doc_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="pre_disease" class="form-label">Pre-existing Disease</label>
+                <input type="text" class="form-control" id="pre_disease" name="pre_disease" required>
+            </div>
+            <div class="mb-3">
+                <label for="test" class="form-label">Test</label>
+                <input type="text" class="form-control" id="test" name="test" required>
+            </div>
+            <div class="mb-3">
+                <label for="imp_note" class="form-label">Important Note</label>
+                <input type="text" class="form-control" id="imp_note" name="imp_note" required>
+            </div>
+            <div class="mb-3">
+                <label for="next_test_doc_id" class="form-label">Next Test Doctor ID</label>
+                <input type="text" class="form-control" id="next_test_doc_id" name="next_test_doc_id" required>
+            </div>
+            <div class="mb-3">
+                <label for="next_test_doc_name" class="form-label">Next Test Doctor Name</label>
+                <input type="text" class="form-control" id="next_test_doc_name" name="next_test_doc_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="next_doc_id" class="form-label">Next Doctor ID</label>
+                <input type="text" class="form-control" id="next_doc_id" name="next_doc_id" required>
+            </div>
+            <div class="mb-3">
+                <label for="next_doc_name" class="form-label">Next Doctor Name</label>
+                <input type="text" class="form-control" id="next_doc_name" name="next_doc_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="note" class="form-label">Note</label>
+                <input type="text" class="form-control" id="note" name="note" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Table</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
