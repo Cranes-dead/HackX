@@ -25,6 +25,8 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script type="module" src="dashboard.js"></script>
 </head>
 
 <body>
@@ -39,8 +41,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Personal Information</h5>
                         <!-- Display patient information here -->
-                        <p class="card-text">Name: John Doe</p>
-                        <p class="card-text">Email: john@example.com</p>
+                        <p class="card-text" id="userName">Name:<span>  Loading....</span></p>
+                        <p class="card-text" id="userEmail">Email:<span>  Loading....</span></p>
                         <!-- Add more patient information as needed -->
                     </div>
                 </div>
